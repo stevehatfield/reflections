@@ -1,0 +1,84 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    The use of diff speeded up identifying a change by highlighting the
+    differences between the two files. By focussing attention on the changes it
+    eliminated the need for searching.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    You can use the history to identify when a bug might have been introduced
+    and easily revert to a previous bug free version. It can also allow you to
+    identify who made the change and when.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Pro:
+      - You can make sensible choices about the size of a commit.
+      - Fewer commits make it easier to find the one you are interested in if a message was included.
+
+    Con:
+      - May forget to commit, making any subsequent commit too large.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    If changes in different files are related git will keep a snapshot of the file status across all of the files whenever a commit is made.
+
+    Google docs is a general purpose repository and doesn't have the concept of related files.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    1. Use git log which shows the history of commits to identify each commit by id and/or message.
+    2. Use git diff msg-id msg-id to view the differences between each file.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    The ability to checkout a previous version of the code repository means that we can revert
+    back to a code state before a bug was introduced.
+    This is done using git checkout <commit id>, git diff can then be used to compare versions to identify the actual changes that introduced the bug.
+    Having an easy way to revert should therefore allow more code experimentation.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    I can see how getting used to using git could have a great impact on my ability to develop the necessary python programs for Udacity and EDX courses.
+
+Git command review
+  Compare two commits, printing each line that is present in one commit but not the other.
+  - git diff will do this. It takes two arguments - the two commit ids to compare.
+  git diff <original file> <new file>
+
+
+  Make a copy of an entire Git repository, including the history, onto your own computer.
+  - git clone will do this. It takes one argument - the url of the repository to copy.
+
+
+  Temporarily reset all files in a directory to their state at the time of a specific commit.
+  - git checkout will do this. It takes one argument - the commit ID to restore.
+
+
+  Show the commits made in this repository, starting with the most recent.
+  - git log will do this. It doesn't take any arguments.
+
+Behavior of git clone
+  If someone else gives you the location of their directory or repository, you can copy or clone it to your own computer.
+
+  - This is true for both copying a directory and cloning a repository. As you saw in the previous lesson, if you have a URL to a repository, you can copy it to your computer using git clone. For copying a directory, you weren't expected to know this, but it is possible to copy a directory from one computer to another using the command scp, which stands for "secure copy". The name was chosen because the scp command lets you securely copy a directory from one computer to another.
+
+
+  The history of changes to the directory or repository is copied.
+
+  - This is true for cloning a repository, but not for copying a directory. The main reason to use git clone rather than copying the directory is because git clone will also copy the commit history of the repository. However, copying can be done on any directory, whereas git clone only works on a Git repository.
+
+  If you make changes to the copied directory or cloned repository, the original will not change.
+
+  - This is true for both copying a directory and cloning a repository. In both cases, you're making a copy that you can alter without changing the original.
+
+
+  The state of every file in the directory or repository is copied.
+
+  - This is true for both copying a directory and cloning a repository. In both cases, all the files are copied.
