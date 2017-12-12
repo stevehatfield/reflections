@@ -26,11 +26,18 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+- make the change in the underpinning file, use git add <file name> to add it to the staging area, check that it has been added to the staging area using git diff (with no arguments)
+- the difference between the staging area and the repository can be checked using:
+ git diff --staged and then use git commit to add it to the repository.
+ - to discard changes in the working directory and staging area use:
+ git reset --hard (NOTE: use only when you know what will be discarded as this is not recoverable in git as none of the changes will have been added to version control at this stage)
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
+- branches allow for code experimentation outside of the main working code base. This can be very useful in allowing work on other features.
 
 How do the diagrams help you visualize the branch structure?
+- They show commits on each branch and when branches diverged.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
