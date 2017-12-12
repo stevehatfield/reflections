@@ -47,7 +47,13 @@ Why do we represent it in the diagram the way we do?
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+- pros
+automatic merging potentially speeds up workflow
+flags merge conflicts when detected
 
+- cons
+can't deal with all merge conflicts, still requires manual intervention and discussion with collaborators to resolve conflicts.
+may not spot all changes that have been made (creation of a new function in one but not the other which didn't conflict)
 
 Git Commit command
 - You can also specify a commit message via the command line by running:
