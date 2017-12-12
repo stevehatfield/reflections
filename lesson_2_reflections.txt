@@ -39,8 +39,11 @@ organized? How would branches help?
 How do the diagrams help you visualize the branch structure?
 - They show commits on each branch and when branches diverged.
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+What is the result of merging two branches together?
+- The commit log will show the history of commits by timestamp. We can remove a branch label by the git branch -d <branch lable>
+
+Why do we represent it in the diagram the way we do?
+- the two branches are shown as merging with commits ordered by timestamp.
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
