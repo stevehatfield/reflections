@@ -23,3 +23,13 @@ How would you collaborate without using Git or GitHub? What would be easier, and
 - Version history would not be available.
 
 - It would be easier without github if you were purely working locally.
+
+When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
+
+- Make changes in a separate branch rather than directly in master when collaborating with others remotely.
+
+- The workflow when making changes in a separate branch is more complicated than working directly in master, especially when you need to stay up-to-date with changes others are making. Rather than simply pulling and pushing, you need to
+1. Pull changes into your local master branch.
+2. Merge the local master into your branch (different-oil, in our case).
+3. Then push your branch to the remote.
+4. Finally merge your branch into master, either locally or on GitHub.
